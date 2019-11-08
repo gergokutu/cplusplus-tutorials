@@ -31,5 +31,7 @@ int main()
   cin >> exponent;
   print_pow(base, exponent);
   // benefit » do not have to repeat the codes just call
+  // if you want to change e.g output formatting
+  // enough to do it only 1 place » void_power function
   print_pow(3, 3);
 }
