@@ -27,4 +27,5 @@ int main()
   bool pizza_is_good_b = false;
   cout << std::boolalpha << pizza_is_good_b << endl; // false
   if (!pizza_is_good_b) cout << "There is no pizza." << endl; // false >> There is no pizza.
+  // ! >> same as in JS (opposite, negator)
 }
