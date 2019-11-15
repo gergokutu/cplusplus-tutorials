@@ -6,8 +6,8 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-// create a custom function
-// declaring the function
+// 0. CREATE a custom function
+// 1. DECLARE the function
 // declarations always on top!! » because of compiling
 // declaring and defining can be 1 step
 double power(double, int);
@@ -21,17 +21,18 @@ int main()
   cin >> exponent;
 
   // use the built-in cmath pow
-  // cout << "The result is: " << pow(base, exponent) << "." << std::endl;
+  cout << "The result is: " << pow(base, exponent) << " with built in <cmath> pow." << std::endl;
   // creat a variable with double type instead the prev line
-  // double power = pow(base, exponent);
-  // cout << "The result is: " << power << endl;
+  double power_b = pow(base, exponent);
+  cout << "The result is: " << power_b << " with built in <cmath> pow - ver2." << endl;
 
+  // 3. CALL/INVOKE the function
   // use my own power function!!!
   double myPower = power(base, exponent);
-  cout << "The result is: " << myPower << endl;
+  cout << "The result is: " << myPower << " with my own power function." << endl;
 }
 
-// defining the function
+// 2. DEFINE the function
 // you can declare and define in 1 step
 // but in this case you have to move 
 // the following definition to the top

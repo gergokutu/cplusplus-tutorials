@@ -10,8 +10,8 @@ int main()
   std::string greeting = "Hello";
   std::cout << greeting[0] << std::endl;
 
-  std::string name; // "" >> an e mpty string is the default value
-  std::cout << name << std::endl;
+  std::string name; // "" >> an empty string is the default value
+  std::cout << name << std::endl; // empty string then new line...
 
   // string concatenation
   std::cout << "Type your name: ";
@@ -36,8 +36,10 @@ int main()
   // name[] = "Ferrari";
   // nor a shorter string is allowed
   // name[] = "BMW";
+  std::cout << car << std::endl;
 
+  std::cout << "Type something!" << std::endl;
   std::string bye;
   std::cin >> bye;
-  std::cout << bye << std::endl;
+  std::cout << "You typed: " << bye << std::endl;
 }

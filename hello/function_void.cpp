@@ -15,6 +15,7 @@ double power(double base, int exponent)
 }
 
 // print the result to the consol
+// void >> no return value is necessary...
 void print_pow(double base, int exponent)
 {
   double myPower = power(base, exponent);
@@ -33,5 +34,6 @@ int main()
   // benefit » do not have to repeat the codes just call
   // if you want to change e.g output formatting
   // enough to do it only 1 place » print_pow function
+  cout << "Invoking print_pow(3, 3) returns: " << std::endl;
   print_pow(3, 3);
 }

@@ -9,7 +9,7 @@ int main()
 { 
   // returns the size of the datatype in bytes
   // short is 2 bytes » 16 bits
-  cout << "Size of datatype: " << sizeof(short) << "\n";
+  cout << "Memory size of the data type: " << sizeof(short) << " bytes\n";
 
   // integral datatypes
   short a;
