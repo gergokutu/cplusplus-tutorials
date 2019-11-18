@@ -47,5 +47,29 @@ int main()
     // default:
     //   break;
   }
+
+  // enum class used in a switch statement
+  // c++11 standard capability
+  // g++ switch_statement.cpp --std=c++11
+  enum class Color{blue, black, orange, white};
+  Color basic = Color::white;
+
+  switch (basic)
+  {
+    case Color::blue:
+      break;
+    case Color::black:
+      break;
+    case Color::orange:
+      break;
+    case Color::white:
+      std::cout << "white is the color\n";
+      break;
+    // default not necessary
+    // because enum we can have only 4 possible values...
+    // default:
+    //   break;
+  }
+
   return 0;
 }
