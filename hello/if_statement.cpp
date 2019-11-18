@@ -12,7 +12,7 @@ int main()
   }
   else if(age == 18)
   {
-    std::cout << "You are 18 years old.\n";
+    std::cout << "Let me see your ID, please.\n";
     // return -1;
   }
   else
