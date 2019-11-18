@@ -28,7 +28,7 @@ int main()
   // usually when you know 
   // the number of iterations ahead of time
 
-  for (i = 0; i < 3; i++)
+  for (int i = 0; i < 3; i++)
   {
     std::cout << "With for loop\n";
   }
