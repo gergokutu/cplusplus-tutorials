@@ -9,11 +9,11 @@ int main()
   // guess game app
   std::string password = "password123";
   std::string guess;
+  
   do 
   {
     std::cout << "Guess the password: ";
     std::cin >> guess;
   } while (guess != password);
   // } while (false);
-
 }
