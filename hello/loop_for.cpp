@@ -16,6 +16,6 @@ int main()
   { 
     factorial = factorial * i;
   }
-  std::cout << "factorial of " << fact << " is: " << factorial << std::endl;
+  std::cout << "factorial of " << fact << "is: " << factorial << std::endl;
   return 0;
 }
