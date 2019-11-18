@@ -42,4 +42,30 @@ int main()
 
   // comparioson
   // ==  !=  < >   <= >=
+
+  // with nested if statements
+  std::string color = "blue";
+  int number = 1;
+
+  std::cout << "My favorite color: " << std::endl;
+  std::string color_guess;
+  std::cin >> color_guess;
+
+  std::cout << "My favorite number: ";
+  int number_guess;
+  std::cin >> number_guess;
+
+  if (color == color_guess)
+  {
+    if(number == number_guess)
+    {
+      std::cout << "Wooww, correct." << std::endl;
+    }
+    std::cout << "Wrong number" << std::endl;
+  }
+  else
+  {
+    std::cout << "Something wrong." << std::endl;
+  }
+  std::cout << "Always see this!!!\n";
 }
