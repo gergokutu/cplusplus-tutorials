@@ -27,7 +27,8 @@ int main()
   {
     std::cout << "Only the name is correct\n";
   }
-  else if (my_name != name_guess && my_age == age_guess) // negate
+  // else if (my_name != name_guess && my_age == age_guess) // negate
+  else if (!(my_name == name_guess) && my_age == age_guess) 
   {
     std::cout << "Only the age is correct\n";
   } else
