@@ -1,4 +1,4 @@
-// return & break keywords
+// break keyword
 #include <iostream>
 #include <string>
 
@@ -16,6 +16,7 @@ int main()
       // break our search
       // stops after hello
       // try without break
+      // break get it out from the loop
       break;
     }
   }

@@ -13,7 +13,7 @@ int main()
     // print all of the chars except o
     if (sentence[i] == 'o')
     {
-      // stop the current iteration to go to the next iteration
+      // stop the current iteration and go to the next iteration
       continue;
     }
     std::cout << sentence[i] << std::endl;
