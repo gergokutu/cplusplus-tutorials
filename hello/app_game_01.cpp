@@ -1,8 +1,31 @@
 #include <string>
 #include <iostream>
+// include the c standard library and c time
+// when you work with random numbers
+#include <cstdlib>
+#include <ctime>
+
+// create the number guessing game function
+void play_game()
+{
+  // create a random number
+  // % 251 >> the randon number is always sg 0-250
+  // Caleb has a sepearate video on random numbers in C prog tutorials
+  // rand >> creates the same sequence of random numbers every time
+  // we have to seed a random number to
+  // change the random number generation input
+  int random = rand() % 251;
+  std::cout << random << std::endl;
+}
 
 int main()
-{
+{ 
+  // srand >> seed a random number once
+  // in the beginning, when the application starts
+  // getting that number from the system clock
+  // and the system clock is always changing
+  // do not use this method for encryption
+  srand(time(NULL));
   // create the menu for the game
   // user can select them
   int choice;
@@ -23,7 +46,10 @@ int main()
         return 0;
       case 1:
         // later we will change the text to a guess game
-        std::cout << "Yo, let's play a\n";
+        // std::cout << "Yo, let's play a\n";
+
+        play_game();
+
         // the break here is not necessary
         // but good practice
         break;
