@@ -15,7 +15,7 @@ int main()
   int age_guess;
   std::cin >> age_guess;
 
-  if(my_name == name_guess && my_age == age_guess) // and
+  if (my_name == name_guess && my_age == age_guess) // and
   {
     std::cout << "Both age and name correct\n";
   } 

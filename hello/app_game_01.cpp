@@ -12,10 +12,34 @@ void play_game()
   // % 251 >> the randon number is always sg 0-250
   // Caleb has a sepearate video on random numbers in C prog tutorials
   // rand >> creates the same sequence of random numbers every time
-  // we have to seed a random number to
+  // to fix that we have to seed a random number to
   // change the random number generation input
   int random = rand() % 251;
-  std::cout << random << std::endl;
+  // next line just shows the random number
+  // std::cout << random << std::endl;
+  std::cout << "Guess a random number from 0 to 250: " << std::endl;
+
+  while (true)
+  {
+    int guess;
+    std::cin >> guess;
+
+    if (guess == random)
+    {
+      std::cout << "\n!!!!!!!!!!!!!!!YOU WIN!!!!!!!!!!!!!!!!\n\n";
+      // if it's correct
+      // we want to break out from this loop
+      break;
+    } 
+    else if (guess < random)
+    {
+      std::cout << "Too low\n";
+    } 
+    else
+    {
+      std::cout << "Too high\n";
+    }
+  }
 }
 
 int main()
