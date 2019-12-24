@@ -8,6 +8,7 @@ int main()
   // size 100 is index 99 (size -1) >> array is 0 indexed
   // statically sized >> when it is compiled the size (storage) is set
   // arrays has no knowledge about their size
+  // arrays can lose the knowledge of their size when passing them to functions...
   int guesses[100];
 
   // if you want a dinamic array >> use vectors
