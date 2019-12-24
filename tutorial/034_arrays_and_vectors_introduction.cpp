@@ -14,7 +14,7 @@ int main()
   // vectors is other programming languages: lists, list arrays
   // you can add more elements later (more than the size)
   // use this if you do not know the size ahead of time
-  // knowledge about their size
+  // if you do not have knowledge about their size
 
   // templetized array
   // normal array wrapped inside of an object
