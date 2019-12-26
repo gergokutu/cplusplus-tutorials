@@ -53,8 +53,18 @@ int main()
   // print_array(guesses, SIZE);
   print_array(guesses, count);
   // cin keeps the wrong input >> breaks...
-  // correct it
+  // correct it manually
   std::cin.clear();
+  // ignore the next 10000 input of new line
+  // clear out the junk from input...
+  // try also without the next line of code!!
+  // std::cin.ignore(10000, '\n');
+  // remove the maximum number of characters
+  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+  std::string test;
+  std::cin >> test;
+  std::cout << test << std::endl;
 
   return 0;
 }
