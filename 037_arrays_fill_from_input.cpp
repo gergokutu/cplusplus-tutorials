@@ -54,7 +54,7 @@ int main()
   print_array(guesses, count);
   // cin keeps the wrong input >> breaks...
   // correct it
-  std::cin.clear()
+  std::cin.clear();
 
   return 0;
 }
