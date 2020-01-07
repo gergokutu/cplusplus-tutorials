@@ -17,9 +17,20 @@
 // include array
 #include <array>
 
+// you will get the 0s
 void print_array(std::array<int, 20> data)
 {
   for (int i = 0; i < data.size(); i++)
+  {
+    std::cout << data[i] << "\t";
+  }
+  std::cout << "\n";
+}
+
+// without 0s >> plus argument needed
+void print_array_2(std::array<int, 20> data, int size)
+{
+  for (int i = 0; i < size; i++)
   {
     std::cout << data[i] << "\t";
   }
@@ -31,5 +42,8 @@ int main()
   // create an STL array
   // <type, size>
   std::array<int, 20> numbers = {1, 2, 3};
+  std::cout << "print_array:\t";
   print_array(numbers);
+  std::cout << "print_array_2:\t";
+  print_array_2(numbers, 3);
 }
