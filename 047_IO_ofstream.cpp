@@ -27,6 +27,12 @@ int main()
   // use the append
   std::ofstream file ("hello.txt", std::ios::app);
 
+  //check if the file has been successfully opened
+  if (file.is_open())
+  {
+    std::cout << "success n00b\n";
+  }
+
   // write into the file
   // just use the peviously created 'file' oject
   // as the std::cout...
