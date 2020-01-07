@@ -4,6 +4,18 @@
 #include <cstdlib>
 #include <ctime>
 
+// define the array printing function, counter too
+void print_array(int array[], int count)
+{
+  for (int i = 0; i < count; i++)
+  {
+    std::cout << array[i] << "\t";
+  }
+  // new line in 2 separate ways
+  std::cout << std::endl;
+  std::cout << "\n";
+}
+
 void play_game()
 {
   // initialize an array and keep track of guesses
@@ -47,6 +59,8 @@ void play_game()
       std::cout << "Too high\n";
     }
   }
+  // invoke a function to print the array
+  print_array(guesses, guess_count);
 }
 
 int main()
