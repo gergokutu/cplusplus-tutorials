@@ -26,7 +26,12 @@ void play_game()
     // instead of the next line you can put ++
     // into the array parameter too
     // guess_count++;
+    // pre vs postfix >> wee need postfix now
     guesses[guess_count++] = guess;
+    // next line >> prefix won't work
+    // because it's increment the guesses array index first
+    // and then assign the value to the guesses array
+    // guesses[++guess_count] = guess;
 
     if (guess == random)
     {
