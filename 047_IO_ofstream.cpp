@@ -1,6 +1,7 @@
 #include <iostream>
 // include file stream
 #include <fstream>
+#include <vector>
 
 int main()
 {
@@ -17,7 +18,32 @@ int main()
   // same but shorter
   // if the file does not exist
   // it is automatically created
-  std::ofstream file ("hello.txt");
+  // with this method the file is overwritten
+  // every time when running the executable
+  // not repeating e.g the names...
+  // std::ofstream file ("hello.txt");
+
+  // if you do not want to overwrite it
+  // use the append
+  std::ofstream file ("hello.txt", std::ios::app);
+
+  // write into the file
+  // just use the peviously created 'file' oject
+  // as the std::cout...
+  file << "hey\n";
+
+  // write several names into the file
+  std::vector<std::string> names;
+  names.push_back("Mogyi");
+  names.push_back("Pocok");
+  names.push_back("Duplex");
+
+  // use a range based for-loop
+  // to add the names
+  for (std::string name : names)
+  {
+    file << name << std::endl;
+  }
 
   // when you are done with the file
   // actually it is not always necessary
