@@ -28,7 +28,13 @@ int main()
 {
   // create a vector and assign some values
   std::vector<int> data = {1, 2, 3};
-  // add data to the vector
+  // add data to the end of vector
   data.push_back(12);
-  std::cout << data[3] << std::endl;
+  std::cout << data[3] << std::endl; // 12
+  std::cout << data.size() << std::endl; // 4
+  std::cout << data[data.size() - 1] << std::endl; // last item in the array
+
+  // remove the last item of the vector
+  data.pop_back();
+  std::cout << data.size() << std::endl; // 3 again
 }
