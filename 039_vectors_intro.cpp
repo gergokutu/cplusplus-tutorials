@@ -38,3 +38,5 @@ int main()
   data.pop_back();
   std::cout << data.size() << std::endl; // 3 again
 }
+
+// good article https://www.geeksforgeeks.org/vector-in-cpp-stl/
