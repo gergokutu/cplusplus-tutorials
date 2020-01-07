@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 
+// the passed data (vector in this case)
+// is copied into the data variable (e.g number >> data)
 void print_vector(std::vector<int> data)
 {
   for (int i = 0; i < data.size(); i++)
