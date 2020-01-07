@@ -6,15 +6,27 @@
 
 void play_game()
 {
+  // initialize an array and keep track of guesses
+  int guesses[250];
+  // every time we insert a guess to the array
+  // we want to change the counter
+  int guess_count = 0;
+
   int random = rand() % 251;
   // next line just shows the random number
-  // std::cout << random << std::endl;
+  std::cout << random << std::endl;
   std::cout << "Guess a random number from 0 to 250: " << std::endl;
 
   while (true)
   {
     int guess;
     std::cin >> guess;
+
+    // guesses[guess_count] = guess;
+    // instead of the next line you can put ++
+    // into the array parameter too
+    // guess_count++;
+    guesses[guess_count++] = guess;
 
     if (guess == random)
     {
