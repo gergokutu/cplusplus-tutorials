@@ -25,7 +25,14 @@ int main()
 
   // if you do not want to overwrite it
   // use the append
-  std::ofstream file ("hello.txt", std::ios::app);
+  // std::ofstream file ("hello.txt", std::ios::app);
+
+  // instead of hardcoded filename (hello.txt)
+  // ask it from user through console
+  std::cout << "Enter a file name with .txt extension!\n";
+  std::string filename;
+  std::cin >> filename;
+  std::ofstream file (filename.c_str(), std::ios::app);
 
   //check if the file has been successfully opened
   if (file.is_open())
