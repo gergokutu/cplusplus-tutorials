@@ -13,3 +13,13 @@
 // we have an extra layer of capabilities like remembering the size
 
 // STL arrays in practice
+#include <iostream>
+// include array
+#include <array>
+
+int main()
+{
+  // create an STL array
+  // <type, size>
+  std::array<int, 20> data = {1, 2, 3};
+}
