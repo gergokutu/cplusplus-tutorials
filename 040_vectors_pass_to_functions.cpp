@@ -14,9 +14,9 @@ void print_vector(std::vector<int> data)
 }
 
 // if you want to change the data inside the function
-// you have to pass it by reference
+// you can share memory of 'number' vector to data variable
+// only you have to pass it by reference
 // &data
-
 void print_vector_ref(std::vector<int> &data)
 {
   data.push_back(12);
