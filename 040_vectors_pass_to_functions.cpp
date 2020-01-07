@@ -17,6 +17,9 @@ void print_vector(std::vector<int> data)
 // you can share memory of 'number' vector to data variable
 // only you have to pass it by reference (copy the memory location)
 // &data
+// when to use:
+// if you have a huge vector you might not want to copy by value
+// because that's going to use a lot of memory...
 void print_vector_ref(std::vector<int> &data)
 {
   data.push_back(12);
