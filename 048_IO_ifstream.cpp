@@ -54,6 +54,12 @@ int main()
   // use getline function
   std::ifstream file4 ("hello.txt");
 
+  // check if the file is opened successfully
+  if (file4.is_open())
+  {
+    std::cout << "It worked!\n";
+  }
+
   // 2 arguments >> (stream, variable-to-store)
   // returns the first line
   // if the first line is 'hey you'
