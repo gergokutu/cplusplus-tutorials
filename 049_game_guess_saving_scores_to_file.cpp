@@ -51,12 +51,27 @@ void play_game()
   // open a file with input stream
   std::ifstream input("best_scores.txt");
 
+  // return to the menu if cannot open
+  // you can play, but cannot compare your scores to best score
+  if (!input.is_open())
+  {
+    std::cout << "Unable to read file\n";
+    return;
+  }
+
   // get the existing best_score
   int best_score;
   input >> best_score;
 
   // open an output stream as well
   std::ofstream output("best_scores.txt");
+
+  // return to the menu if cannot open
+  if (!output.is_open())
+  {
+    std::cout << "Unable to write file\n";
+    return;
+  }
 
   // write the lowest score into the file
   if (score < best_score)
