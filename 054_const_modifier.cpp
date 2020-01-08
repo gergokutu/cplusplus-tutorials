@@ -15,6 +15,8 @@ void print_array(int array[], int size)
 
 // you can pass a non-const variable as const argument
 // and you cannot change the data
+// but outside of the function scope
+// the variable remains the same >> you can change
 void print_array2(const int array[], int size)
 {
   for (int i = 0; i < size; i++)
@@ -39,6 +41,10 @@ int main()
 
   print_array2(data2, size);
   std::cout << data2[0] << std::endl;
+
+  std::cout << "data2[0] muktiplied by 5 outside the scope of print_array2\n";
+  data2[0] *= 5;
+  std::cout << data2[0] << std::endl; 
 
   return 0;
 }
