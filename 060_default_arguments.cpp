@@ -2,30 +2,34 @@
 // default parameter values
 // default parameters
 // it helps to make parameters optional
+// use overloading when >>
+// everytime when you can put a default value
+// !!! you should minimize overloading (more complex, repeation...)
+// use default arguments when >> 
+// use when you can, better than overloading
 #include <iostream>
 
-struct Rectangle
-{
-  double length;
-  double width;
-}; // do not forget the ; from here!
+// double pow(double base, int pow)
+// {
+//   int total = 1;
 
-double area(double length, double width)
-{
-  return length * width;
-}
+//   for (int i = 0; i < pow; i++)
+//   {
+//     // total = total * base;
+//     total *= base;
+//   }
+//   return total;
+// }
 
-double area(double length)
-{
-  return length * length;
-}
+// use the overloading the make the pow argument optional
+// double pow(double base)
+// {
+//   return base * base;
+// }
 
-double area(Rectangle rectangle)
-{
-  return rectangle.length * rectangle.width;
-}
-
-double pow(double base, int pow)
+// better solution to make the pow argument optional
+// default argument >> int pow = 2
+double pow(double base, int pow = 2)
 {
   int total = 1;
 
@@ -39,15 +43,8 @@ double pow(double base, int pow)
 
 int main()
 {
-  Rectangle rectangle;
-  rectangle.length = 10;
-  rectangle.width = 20;
-
-  std::cout << area(rectangle.length, rectangle.width) << std::endl;
-  std::cout << area(rectangle.length) << std::endl;
-  std::cout << area(rectangle) << std::endl;
-
   std::cout << pow(3, 3) << std::endl;
+  std::cout << pow(3) << std::endl;
 
   return 0;
 }
