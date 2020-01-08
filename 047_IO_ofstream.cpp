@@ -14,11 +14,10 @@ int main()
   // with Windows its a bit different
   // because the extension determines how the file is compiled
   // file.open("hello.txt");
-
   // same but shorter
   // if the file does not exist
   // it is automatically created
-  // with this method the file is overwritten
+  // with these methods the file is overwritten
   // every time when running the executable
   // not repeating e.g the names...
   // std::ofstream file ("hello.txt");
@@ -58,7 +57,7 @@ int main()
     file << name << std::endl;
   }
 
-  // when you are done with the file
+  // when you are done with the file >> close
   // actually it is not always necessary
   // but it explicitly closes the files 
   file.close();
