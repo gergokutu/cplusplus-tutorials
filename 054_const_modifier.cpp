@@ -1,6 +1,13 @@
 #include <iostream>
 #include <vector>
 
+void do_something(int array[])
+{
+  // won't compile because of argument violation...
+  // const int array[] vs int array[]
+  std::cout << array[2] << "\n"; // 3
+}
+
 void print_array(int array[], int size)
 {
   for (int i = 0; i < size; i++)
@@ -27,6 +34,9 @@ void print_array2(const int array[], int size)
     std::cout << array[i] << "\t";
   }
   std::cout << std::endl;
+  // gonna be a problem because of arg violation
+  // const int array[] vs int array[]
+  // do_something(array);
 }
 
 int main()
@@ -44,7 +54,9 @@ int main()
 
   std::cout << "data2[0] muktiplied by 5 outside the scope of print_array2\n";
   data2[0] *= 5;
-  std::cout << data2[0] << std::endl; 
+  std::cout << data2[0] << std::endl;
+
+  do_something(data2); 
 
   return 0;
 }
