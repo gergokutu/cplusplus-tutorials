@@ -7,7 +7,7 @@ int main()
   int grades[] = {1, 2, 3};
 
   std::cout << "2D array: set_of_grades\n";
-  // multidimensional
+  // multidimensional array
   // won't work because the outer array has to know the size...
   // how many sets we have
   // int set_of_grades[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
@@ -28,6 +28,7 @@ int main()
     std::cout << "\n";
   }
 
+  // multidimensional vector
   std::cout << "2D vector: set_of_numbers\n";
   std::vector<std::vector<int>> set_of_numbers = 
   {
