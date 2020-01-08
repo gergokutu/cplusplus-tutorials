@@ -51,5 +51,20 @@ int main()
   char temp = file3.get();
   std::cout << temp << std::endl;
 
+  // use getline function
+  std::ifstream file4 ("hello.txt");
+
+  // 2 arguments >> (stream, variable-to-store)
+  // returns the first line
+  // if the first line is 'hey you'
+  // with first version it is
+  // hey
+  // you
+  // with getline it is
+  // hey you...
+  std::string line;
+  getline(file4, line);
+  std::cout << line << std::endl;
+
   return 0;
 }
