@@ -24,9 +24,32 @@ int main()
   
   for (std::string name : names)
   {
-    std::cout << name << "\t";
+    std::cout << name << "\n";
   }
-  std::cout << "\n";
+
+  // try with char as well
+  std::ifstream file2 ("hello.txt");
+  std::vector<char> names2;
+  char input2;
+  
+  while(file2 >> input2)
+  {
+    names2.push_back(input2);
+  }
+  
+  for (char name2 : names2)
+  {
+    std::cout << name2 << "\n";
+  }
+
+  // use get() method
+  std::ifstream file3 ("hello.txt");
+
+  // get() returns a character
+  // so store it in a char variable
+  // returns only the very first character >> h
+  char temp = file3.get();
+  std::cout << temp << std::endl;
 
   return 0;
 }
