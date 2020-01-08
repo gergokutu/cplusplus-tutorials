@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <fstream>
 
 void print_vector(std::vector<int> vector)
 {
@@ -17,6 +18,8 @@ void print_vector(std::vector<int> vector)
 
 void play_game()
 {
+  int score = 0;
+
   std::vector<int> guesses;
   int random = rand() % 251;
   // next line just shows the random number
@@ -27,6 +30,7 @@ void play_game()
   {
     int guess;
     std::cin >> guess;
+    score++;
     
     guesses.push_back(guess);
 
@@ -43,6 +47,27 @@ void play_game()
     {
       std::cout << "Too high\n";
     }
+  }
+  // open a file with input stream
+  std::ifstream input("best_scores.txt");
+
+  // get the existing best_score
+  int best_score;
+  input >> best_score;
+
+  // open an output stream as well
+  std::ofstream output("best_scores.txt");
+
+  // write the lowest score into the file
+  if (score < best_score)
+  {
+    output << score;
+  }
+  else
+  {
+    // present score is not lower
+    // write back the previous best_score to the file
+    output << best_score;
   }
   
   print_vector(guesses);
