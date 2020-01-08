@@ -1,6 +1,9 @@
+// default arguments sometimes called
+// default parameter values
+// default parameters
+// it helps to make parameters optional
 #include <iostream>
 
-// struct is a custom datatype
 struct Rectangle
 {
   double length;
@@ -12,22 +15,30 @@ double area(double length, double width)
   return length * width;
 }
 
-// 2nd overload
 double area(double length)
 {
   return length * length;
 }
 
-// 3rd overload
-// take a Rectangle which name is rectangle
 double area(Rectangle rectangle)
 {
   return rectangle.length * rectangle.width;
 }
 
+double pow(double base, int pow)
+{
+  int total = 1;
+
+  for (int i = 0; i < pow; i++)
+  {
+    // total = total * base;
+    total *= base;
+  }
+  return total;
+}
+
 int main()
 {
-  // create a rectangle
   Rectangle rectangle;
   rectangle.length = 10;
   rectangle.width = 20;
@@ -35,6 +46,8 @@ int main()
   std::cout << area(rectangle.length, rectangle.width) << std::endl;
   std::cout << area(rectangle.length) << std::endl;
   std::cout << area(rectangle) << std::endl;
+
+  std::cout << pow(3, 3) << std::endl;
 
   return 0;
 }
