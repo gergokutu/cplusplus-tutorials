@@ -3,6 +3,7 @@ Pass By Reference and Pass By Value
 >> passing arguments to functions
 
 Pass by value:
+- everything passed by value except arrays...
 
 void do_stuff(int x) // arg x
 {
@@ -43,6 +44,7 @@ do_stuff(x);
 - we have to pass it by reference (&x) // it could be anything else than x, e.g pista...
 - because in this case the outside x and arg x
 - refer to the same memory location
+- &x is an alias for x variable
 
 Conclusion:
 - only array can be changed inside a function
