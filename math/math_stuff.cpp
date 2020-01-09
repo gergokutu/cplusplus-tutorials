@@ -1,3 +1,5 @@
+// remove all function definitions
+// place it in math_utils.cpp
 #include <iostream>
 
 int main()

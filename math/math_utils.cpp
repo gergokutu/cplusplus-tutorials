@@ -1,4 +1,9 @@
-double pow(double base, int pow = 2)
+// functions come here from math_stuff.cpp
+// func definitions
+
+// you do not want default value for func def
+// you want it in the declaration
+double pow(double base, int pow)
 {
   int total = 1;
 
@@ -9,11 +14,12 @@ double pow(double base, int pow = 2)
   return total;
 }
 
-struct Rectangle
-{
-  double length;
-  double width;
-}; // do not forget the ; from here!
+// get rid of struct
+// struct Rectangle
+// {
+//   double length;
+//   double width;
+// }; // do not forget the ; from here!
 
 double area(double length, double width)
 {
