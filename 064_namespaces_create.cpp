@@ -14,6 +14,8 @@ namespace utilz
   }
 }
 
+// using namespace utilz;
+
 int main()
 {
   int data[] = {1, 2, 3};
@@ -25,3 +27,6 @@ int main()
 
   return 0;
 }
+
+// namespaces with multiple files >> 
+// check ./064_namespace project

@@ -1,0 +1,13 @@
+g++ math_stuff.cpp math_utils.cpp
+
+1. g++ -c math_stuff.cpp math_utils.cpp
+    >> creates two files
+    >> math_stuff.o
+    >> math_utils.o
+    >> object files containing compiled c++ codes
+    >> compile these
+2. g++ math_stuff.o math_utils.o
+
+compile with cpp vs o
+  - if you want to keep your source code hidden > distribute o files
+  - open source project > distribute cpp files
