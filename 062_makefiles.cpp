@@ -33,6 +33,6 @@ Makefile:
 >> makefile is created in ./061_multifile_comp folder
 - touch math_stuff.cpp >> changes the timestamp of the file
 - if it exist
-- make detects it as a change
+- make detects it as a change (compare the date with math_stuff.o date)
 - it will recompile just that part
 */

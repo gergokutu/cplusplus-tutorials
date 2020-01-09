@@ -10,7 +10,7 @@ math_utils.o: math_utils.cpp
 	g++ -c math_utils.cpp
 
 # remove any files that need cleaned up
-# it does not remove anything in the example video?!?
+# run it >> make clean
 clean:
 	rm *.o math
 
