@@ -31,4 +31,8 @@ Makefile:
   - g++ -c file1.cpp
 
 >> makefile is created in ./061_multifile_comp folder
+- touch math_stuff.cpp >> changes the timestamp of the file
+- if it exist
+- make detects it as a change
+- it will recompile just that part
 */
