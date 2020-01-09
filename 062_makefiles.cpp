@@ -29,4 +29,6 @@ Makefile:
 - file1.o:file1.cpp >> file1.o comes from file1.cpp
 - next line >> indent and define how to generate file1.o from file1.cpp
   - g++ -c file1.cpp
+
+>> makefile is created in ./061_multifile_comp folder
 */
