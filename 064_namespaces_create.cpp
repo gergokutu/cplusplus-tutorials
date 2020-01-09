@@ -1,13 +1,17 @@
 #include <iostream>
 #include <vector>
 
-void print_array(const int data[], int size)
+// create a namespace
+namespace utilz
 {
-  for (int i = 0; i < size; i++)
+  void print_array(const int data[], int size)
   {
-    std::cout << data[i] << "\t";
+    for (int i = 0; i < size; i++)
+    {
+      std::cout << data[i] << "\t";
+    }
+    std::cout << "\n";
   }
-  std::cout << "\n";
 }
 
 int main()
@@ -15,7 +19,8 @@ int main()
   int data[] = {1, 2, 3};
   int size = 3;
 
-  print_array(data, size);
+  // prefix print_array with utilz
+  utilz::print_array(data, size);
   std::cout << data[0] << std::endl;
 
   return 0;
