@@ -1,6 +1,8 @@
 // remove all function definitions
 // place it in math_utils.cpp
 #include <iostream>
+// include the custom header file
+#include "math_utils.h"
 
 int main()
 {
