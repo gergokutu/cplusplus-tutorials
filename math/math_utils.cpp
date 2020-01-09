@@ -2,6 +2,7 @@
 // func definitions
 // include the custom header file
 #include "math_utils.h"
+
 // you do not want default value for func def
 // you want it in the declaration
 double pow(double base, int pow)
