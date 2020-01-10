@@ -27,10 +27,3 @@ Private:
 - but can be accessed on the class/struct
 - classes are members of pivate by default
 */
-#include <iostream>
-
-int main()
-{
-  
-  return 0;
-}
