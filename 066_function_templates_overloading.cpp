@@ -23,6 +23,9 @@ void swap(T a[], T b[], int size)
   }
 }
 
+// it would work with not templatized version
+// e.g. void print_array(int a[], int b[], int size)
+// but only for arrays containing int (numbers)...
 template <typename T>
 void print_array(T a[], T b[], int size)
 {
@@ -50,14 +53,26 @@ int main()
   int array_b[] = {4, 5, 6};
   print_array(array_a, array_b, SIZE);
   std::cout << "\n";
-  std::cout << "array_a: " << array_a[0] << "\tb: " << array_b[0] << "\n\n";
+  std::cout << "array_a: " << array_a[0] << "\tarray_b: " << array_b[0] << "\n\n";
   // size should be passed
   // because it helps to decide
   // which templetized swap() should be called (which overload)
   swap(array_a, array_b, SIZE);
   print_array(array_a, array_b, SIZE);
   std::cout << "\n";
-  std::cout << "array_a: " << array_a[0] << "\tb: " << array_b[0] << "\n\n";
+  std::cout << "array_a: " << array_a[0] << "\tarray_b: " << array_b[0] << "\n\n";
 
+  // check it with string array
+  std::string string_a[] = {"<-hey", "<-hey", "<-hey"};
+  std::string string_b[] = {"you->", "you->", "you->"};
+  print_array(string_a, string_b, SIZE);
+  std::cout << "\n";
+  std::cout << "string_a: " << string_a[0] << "\tstring_b: " << string_b[0] << "\n\n";
+  
+  swap(string_a, string_b, SIZE);
+  print_array(string_a, string_b, SIZE);
+  std::cout << "\n";
+  std::cout << "string_a: " << string_a[0] << "\tstring_b: " << string_b[0] << "\n\n";
+  
   return 0;
 }
