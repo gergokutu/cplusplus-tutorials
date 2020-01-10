@@ -18,8 +18,9 @@ struct User
   // create a private
   // it can be accessed only here
   // store information without exposing it to the public word
-  // needs > g++ main.cpp -std=c++11
   private:
+    // because of inline assignment >
+    // needs > g++ main.cpp -std=c++11
     std::string category = "inaccessible";
 }; // do not forget the semi-colon
 
