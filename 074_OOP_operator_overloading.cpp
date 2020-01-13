@@ -39,6 +39,16 @@ class Position
       new_pos.y = y + pos.y;
       return new_pos;
     }
+
+    // teach the compiler when 2 Position is equal to each other
+    bool operator == (Position pos)
+    {
+      if(x == pos.x && y == pos.y)
+      {
+        return true;
+      }
+      return false;
+    }
 };
 
 int main()
@@ -46,6 +56,11 @@ int main()
   Position pos1, pos2;
   Position pos3 = pos1 + pos2;
   std::cout << pos3.x << " " << pos3.y << std::endl; // 20 40
+
+  if (pos1 == pos2)
+  {
+    std::cout << "Theay are the same\n";
+  }
 
   return 0;
 }
