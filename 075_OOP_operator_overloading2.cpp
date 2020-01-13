@@ -63,14 +63,15 @@ int User::user_count = 0;
 // we can connect the <<
 // & > because we do not want to copy the object every time
 // we want to return a reference to the same object
-std::ostream& operator << (std::ostream& output, User user)
+// optional > const User user
+// to ensure User not gonna be changed
+std::ostream& operator << (std::ostream& output, const User user)
 {
-  output << "First name:\t" << user.first_name << std::endl;
-  output << "Last name:\t" << user.last_name << std::endl;
   // do not put the final std::endl; here
   // because we handle it the regular way
-  // in the main() > std::cout << user1 << std::endl; 
-  output << "Status:\t\t" << user.get_status();
+  // in the main() > std::cout << user1 << std::endl;
+  output << "First name:\t" << user.first_name << "\n" 
+  << "Last name:\t" << user.last_name;
   return output;
 }
 
