@@ -61,6 +61,8 @@ class User
     // declaration here
     // put the actual definition outside of the class
     friend void output_status(User user);
+    
+    friend std::ostream& operator << (std::ostream& output, const User user);
 };
 int User::user_count = 0;
 void output_status(User user)
@@ -68,13 +70,24 @@ void output_status(User user)
   std::cout << user.status << std::endl;
 }
 
+// you can pass getter/setter to the overload >
+// it will do the same than friend function >
+// access the private data...
 std::ostream& operator << (std::ostream& output, const User user)
 {
   output << "First name:\t" << user.first_name << "\n" 
   << "Last name:\t" << user.last_name;
+  // after
+  // std::ostream& operator << (std::ostream& output, const User user)
+  // as friend function in the class
+  // this overload should be able to access private members (e.g status)
+  std::cout << "\nStatus: " << user.status;
   return output;
 }
 
+// you can pass getter/setter to the overload >
+// it will do the same than friend function >
+// access the private data...
 std::istream& operator >> (std::istream& input, User &user)
 {
   input >> user.first_name >> user.last_name;
@@ -90,4 +103,9 @@ int main()
   // std::cout << user1.output_status() << std::endl;
   // works
   output_status(user1);
+
+  user1.first_name = "Gergo";
+  user1.last_name = "Kovacs";
+  user1.set_status("Platinum");
+  std::cout << user1 << std::endl;
 }
