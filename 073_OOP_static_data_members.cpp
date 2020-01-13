@@ -63,6 +63,8 @@ class User
     ~User()
     {
       std::cout << "Destructor" << std::endl;
+      // and modify user_count here
+      user_count--;
     }
 }; // do not forget the semi-colon
 
