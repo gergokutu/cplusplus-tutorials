@@ -48,19 +48,28 @@ class User
     // create additional constructors
     // what take parameters
     // overloading
-    User(std::string first_name, std::string last_name)
+    // you can set the initial state of private members
+    User(std::string first_name, std::string last_name, std::string status)
     {
       // use the this keyword to specify the class data member
       // simple first_name > the argument
       this -> first_name = first_name;
       this -> last_name = last_name;
+      // set the initial state of private member status
+      this -> status = status;
     }
 }; // do not forget the semi-colon
 
 int main()
 {
+  // it works too
+  // because we have a explicitly defined default constructor
+  // if we remove it from the class def >> User()...
+  // it will throws an error
   User user1;
+  std::cout << user1.get_status() << std::endl;
 
-  User user2("Gergo", "Kovacs");
+  User user2("Gergo", "Kovacs", "Platinum");
   std::cout << user2.first_name << std::endl;
+  std::cout << user2.get_status() << std::endl;
 }
