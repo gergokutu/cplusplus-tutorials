@@ -82,3 +82,7 @@ std::istream& operator >> (std::istream& input, User &user)
   input >> user.first_name >> user.last_name >> user.status;
   return input;
 }
+
+// if you want to add more user related files
+// maybe better to create a separate user_functions.cpp and user_functions.h
+// for this reason...
