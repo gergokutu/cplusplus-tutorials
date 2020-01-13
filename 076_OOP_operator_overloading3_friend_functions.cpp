@@ -81,7 +81,7 @@ std::ostream& operator << (std::ostream& output, const User user)
   // std::ostream& operator << (std::ostream& output, const User user)
   // as friend function in the class
   // this overload should be able to access private members (e.g status)
-  std::cout << "\nStatus: " << user.status;
+  std::cout << "\nStatus:\t\t" << user.status;
   return output;
 }
 
