@@ -58,6 +58,15 @@ class User
       // set the initial state of private member status
       this -> status = status;
     }
+
+    // destructor
+    // if you want to do sth special in the destructor
+    // you can do it this way
+    // called automatically
+    ~User()
+    {
+      std::cout << "Destructor" << std::endl;
+    }
 }; // do not forget the semi-colon
 
 int main()
@@ -65,7 +74,7 @@ int main()
   // it works too
   // because we have a explicitly defined default constructor
   // if we remove it from the class def >> User()...
-  // it will throws an error
+  // it will throws an error (even when the object instantiated)
   User user1;
   std::cout << user1.get_status() << std::endl;
 
