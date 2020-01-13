@@ -22,3 +22,45 @@ destructor:
   // code > e.g. a message, log sth...
 }
 */
+#include <iostream>
+#include <vector>
+
+class User
+{
+  std::string status = "Gold";
+
+  public:
+    std::string first_name;
+    std::string last_name;
+    std::string get_status()
+    {
+      return status;
+    }
+
+    // modify constructor to see what's happening
+    // default constructor because it has no parameters
+    // called everytime when a new user is created
+    User()
+    {
+      std::cout << "Constructor" << std::endl;
+    }
+
+    // create additional constructors
+    // what take parameters
+    // overloading
+    User(std::string first_name, std::string last_name)
+    {
+      // use the this keyword to specify the class data member
+      // simple first_name > the argument
+      this -> first_name = first_name;
+      this -> last_name = last_name;
+    }
+}; // do not forget the semi-colon
+
+int main()
+{
+  User user1;
+
+  User user2("Gergo", "Kovacs");
+  std::cout << user2.first_name << std::endl;
+}

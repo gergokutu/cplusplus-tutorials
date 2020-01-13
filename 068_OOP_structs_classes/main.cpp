@@ -16,29 +16,20 @@ class User
 
 int add_user_if_not_exists(std::vector<User> &users, User user)
 {
-  // iterate over all the elements of the vector
-  // and check if the passed data exists
   for (int i = 0; i < users.size(); i++)
   {
-    // if match
-    // we decide it
-    // e.g if the first_name and last_name equals, than they are the same
     if (users[i].first_name == user.first_name &&
         users[i].last_name == user.last_name)
     { 
-      // return the index of the user
       return i;
     }
   }
   users.push_back(user);
-  // for the return type int
-  // return the lenght of the vector - 1
   return users.size() - 1;
 }
 
 void print_vector(std::vector<User> users)
 { 
-  // try with range based for loop
   for (User user : users)
   {
     std::cout << user.first_name << "\n";
@@ -57,36 +48,23 @@ int main()
   user3.first_name = "Mogyi";
   user3.last_name = "Pocok";
 
-  // create a vector of the users
-  // the type is User!
   std::vector<User> users;
-  // add a user
   users.push_back(user1);
-  // add a user
-  // intantiate to the default state
-  // users.push_back(User());
   users.push_back(user2);
   users.push_back(user3);
 
   User user;
   user.first_name = "Dora";
   user.last_name = "Tonka";
-  // call the function
-  // it should not be added
-  // user index should be returned instead > 1
   std::cout << add_user_if_not_exists(users, user) << std::endl;
 
   User user4;
   user.first_name = "David";
   user.last_name = "Tonka";
-  // call the function
-  // it should be added
-  // its index should be returned > 3 (4th element... 0 index)
   std::cout << add_user_if_not_exists(users, user4) << std::endl;
   std::cout << users.size() << std::endl;
 
   std::cout << users[0].first_name << std::endl;
-  // std::cout << users[1].first_name << std::endl; // gonna be empty string
 
   std::cout << "\nAll first names in the vector:" << std::endl;
   print_vector(users);
