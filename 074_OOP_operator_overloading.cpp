@@ -17,3 +17,35 @@ Point operator + (Point position)
   return point;
 }
 */
+
+// operator overloading == and +
+#include <iostream>
+
+class Position
+{
+  public:
+    int x = 10;
+    int y = 20;
+
+    // teach the compiler how to add 2 Position to each other
+    Position operator + (Position pos)
+    {
+      Position new_pos;
+      // x > the respective objects x (e.g pos1.x, public x, now > 10)
+      // this instances x
+      // pos.x > this operator overloads pos argument x
+      // the parameter's x
+      new_pos.x = x + pos.x;
+      new_pos.y = y + pos.y;
+      return new_pos;
+    }
+};
+
+int main()
+{
+  Position pos1, pos2;
+  Position pos3 = pos1 + pos2;
+  std::cout << pos3.x << " " << pos3.y << std::endl; // 20 40
+
+  return 0;
+}
