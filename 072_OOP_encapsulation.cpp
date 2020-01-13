@@ -25,3 +25,84 @@ Achiving encapsulation in 2 ways:
   - other cases do not pollute your class with them
   - KISS > Keep It Super Simple
 */
+/*
+Intro to constructors
+- special method when a class intantiated into a object
+- User user1;
+- invoked automatically
+- so implicitly defined User() method is the bare minimum > no arg
+- you can make custom constructors
+
+User(std::string first, std::string last)
+{
+  first_name = first;
+  last_name = last;
+};
+User user1 ("Gergo", "Kovacs");
+
+destructor:
+- automatically called when the object deleted
+- you can overwrite it
+
+~User()
+{
+  // code > e.g. a message, log sth...
+}
+*/
+#include <iostream>
+
+class User
+{
+  std::string status = "Gold";
+
+  public:
+    std::string first_name;
+    std::string last_name;
+    // getter
+    // can access the private members
+    std::string get_status()
+    {
+      return status;
+    }
+    // setter
+    // can access the private members
+    void set_status(std::string status)
+    {
+      if (status == "Gold" || status == "Silver" || status == "Bronze" || status == "Platinum")
+      {
+        this -> status = status;
+      }
+      else
+      {
+        this -> status = "Invalid";
+      }
+    }
+
+    User()
+    {
+      std::cout << "Constructor" << std::endl;
+    }
+
+    User(std::string first_name, std::string last_name, std::string status)
+    {
+      this -> first_name = first_name;
+      this -> last_name = last_name;
+      this -> status = status;
+    }
+
+    ~User()
+    {
+      std::cout << "Destructor" << std::endl;
+    }
+}; // do not forget the semi-colon
+
+int main()
+{
+  User user1;
+  user1.set_status("Tacos");
+  std::cout << user1.get_status() << std::endl;
+
+  User user2("Gergo", "Kovacs", "Platinum");
+  std::cout << user2.first_name << std::endl;
+  std::cout << user2.get_status() << std::endl;
+}
