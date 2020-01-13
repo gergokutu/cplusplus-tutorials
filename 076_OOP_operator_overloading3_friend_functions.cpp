@@ -63,6 +63,8 @@ class User
     friend void output_status(User user);
     
     friend std::ostream& operator << (std::ostream& output, const User user);
+
+    friend std::istream& operator >> (std::istream& input, User &user);
 };
 int User::user_count = 0;
 void output_status(User user)
@@ -90,7 +92,8 @@ std::ostream& operator << (std::ostream& output, const User user)
 // access the private data...
 std::istream& operator >> (std::istream& input, User &user)
 {
-  input >> user.first_name >> user.last_name;
+  // input >> user.first_name >> user.last_name;
+  input >> user.first_name >> user.last_name >> user.status;
   return input;
 }
 
@@ -108,4 +111,8 @@ int main()
   user1.last_name = "Kovacs";
   user1.set_status("Platinum");
   std::cout << user1 << std::endl;
+
+  User user2;
+  std::cin >> user2;
+  std::cout << user2 << std::endl;
 }
