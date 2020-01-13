@@ -53,7 +53,7 @@ class User
 };
 int User::user_count = 0;
 
-// insertion operator overload
+// insertion operator overload (<<)
 // we have 2 diff types
 // std::cout and user1...
 // we do not define it inside the class but here
@@ -75,8 +75,29 @@ std::ostream& operator << (std::ostream& output, const User user)
   return output;
 }
 
+// extraction operator overload (>>)
+// do not forget to pass by reference
+// to be able to change user outside of the function
+std::istream& operator >> (std::istream& input, User &user)
+{
+  // istream skip spaces
+  // if Dora Tonka is typed >
+  // Dora > user.first_name
+  // Tonka > user.last_name
+  input >> user.first_name >> user.last_name;
+  return input;
+}
+
+// these operator overloads do not have to access tp private data
+// that is why not ok >
+// handling the status part!!!
+
 int main()
 {
   User user1("Gergo", "Kovacs", "Platinum");
   std::cout << user1 << std::endl;
+
+  User user2;
+  std::cin >> user2;
+  std::cout << user2 << std::endl;
 }
