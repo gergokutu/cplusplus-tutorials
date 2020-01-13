@@ -10,6 +10,11 @@
 class User
 {
   // create a static data member (variable)
+  // you have to assign a value
+  // won't work
+  // static int user_count = 0;
+  // has to be initialized out of line
+  // do it outside of the class
   static int user_count;
   std::string status = "Gold";
 
@@ -68,13 +73,22 @@ class User
     }
 }; // do not forget the semi-colon
 
+// initialize a value for static member
+// it's a bit wierd...
+// but > usable when we allocate memory for it
+// and it happens not when creating the class
+// but intantiating a object of it
+int User::user_count = 0;
+
 int main()
 {
   User user1;
-  user1.set_status("Tacos");
-  std::cout << user1.get_status() << std::endl;
+  std::cout << User::get_user_count() << std::endl;
 
-  User user2("Gergo", "Kovacs", "Platinum");
-  std::cout << user2.first_name << std::endl;
-  std::cout << user2.get_status() << std::endl;
+  User user2, user3, user4;
+  std::cout << User::get_user_count() << std::endl;
+
+  // call the destructor
+  user1.~User();
+  std::cout << User::get_user_count() << std::endl;
 }
