@@ -78,11 +78,22 @@ std::ostream& operator << (std::ostream& output, const User user)
 }
 
 std::istream& operator >> (std::istream& input, User &user)
-{
+{ 
   input >> user.first_name >> user.last_name >> user.status;
+
+  // insert the condition to accept just pre-defined inputs from user
+  if (user.status == "Gold" || user.status == "Silver" || user.status == "Bronze" || user.status == "Platinum")
+  {
+    user.status = user.status;
+  }
+  else
+  {
+    user.status = "Invalid";
+  }
+
   return input;
 }
 
-// if you want to add more user related files
+// if you want to add more user related files >
 // maybe better to create a separate user_functions.cpp and user_functions.h
 // for this reason...
