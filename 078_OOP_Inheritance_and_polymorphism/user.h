@@ -24,6 +24,11 @@ class User
     friend std::istream& operator >> (std::istream& input, User &user);
 
     // virtual > you can overwrite it in the subclasses
+    // without virtual >
+    // Teacher subclass cannot overwrite it
+    // although we referenced user to teacher
+    // it user.output() will print "I am a user"
+    // instead of Teacher's class > 'I am a teacher"
     virtual void output();
 };
 
