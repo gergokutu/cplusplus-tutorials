@@ -1,6 +1,7 @@
 #include <iostream>
-// only main() statys here
 #include "user.h"
+// include teacher.h
+#include "teacher.h"
 
 int main()
 {
@@ -10,4 +11,8 @@ int main()
   User user2;
   std::cin >> user2;
   std::cout << user2 << std::endl;
+
+  // instantiate a teacher
+  Teacher teacher;
+  teacher.output();
 }

@@ -18,7 +18,7 @@ Inheritance:
     - video file
     - audio file
 
-class Teacher public User
+class Teacher : public User
 {
 
 }

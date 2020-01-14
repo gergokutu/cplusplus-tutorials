@@ -1,11 +1,5 @@
-// new file for all of the declarations of User class
-// definitions to user.cpp
 #include <iostream>
-// get rid of the function bodies
-// replace them with semi-colons
-// we only need the declarations here
 
-// use pre-processor directive to avoid multiple includes
 #ifndef USER_H
 #define USER_H
 class User

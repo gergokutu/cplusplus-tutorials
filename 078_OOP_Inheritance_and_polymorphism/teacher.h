@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <string>
+// include the User class header file
+#include "user.h"
 
 // inherit Teacher class from User
 class Teacher : public User

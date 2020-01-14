@@ -1,5 +1,5 @@
-user: main.o user.o
-	g++ main.o user.o -o user -std=c++11
+school: main.o user.o teacher.o
+	g++ main.o user.o teacher.o -o school -std=c++11
 
 main.o: main.cpp
 	g++ -c main.cpp -std=c++11
@@ -7,5 +7,8 @@ main.o: main.cpp
 user.o: user.cpp
 	g++ -c user.cpp -std=c++11
 
+teacher.o: teacher.cpp
+	g++ -c teacher.cpp -std=c++11
+
 clean:
-	rm *.o user
+	rm *.o school
