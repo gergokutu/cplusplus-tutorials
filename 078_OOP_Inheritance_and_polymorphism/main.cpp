@@ -3,6 +3,7 @@
 #include "user.h"
 // include teacher.h
 #include "teacher.h"
+#include "student.h"
 
 int main()
 {
@@ -34,4 +35,11 @@ int main()
   // this user method will outputs "I am a teacher" 
   // instead of "I am a user" because of the reference
   user.output();
+
+  // create a student and reference it
+  Student student;
+  User& user2 = student;
+  // this user2 is acts like as a student
+  // "I am a student"
+  user2.output();
 }
