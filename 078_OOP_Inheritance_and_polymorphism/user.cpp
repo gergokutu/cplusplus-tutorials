@@ -75,3 +75,8 @@ std::istream& operator >> (std::istream& input, User &user)
 
   return input;
 }
+
+void User::output()
+{
+  std::cout << "I am a user\n";
+}

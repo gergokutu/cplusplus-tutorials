@@ -3,7 +3,7 @@
 
 void Teacher::output()
 {
-  std::cout << "output\n";
+  std::cout << "I am a teacher\n";
 }
 
 // chain of calling

@@ -22,6 +22,9 @@ class User
     
     friend std::ostream& operator << (std::ostream& output, const User user);
     friend std::istream& operator >> (std::istream& input, User &user);
+
+    // virtual > you can overwrite it in the subclasses
+    virtual void output();
 };
 
 #endif

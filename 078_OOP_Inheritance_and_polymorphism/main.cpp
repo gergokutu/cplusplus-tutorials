@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "user.h"
 // include teacher.h
 #include "teacher.h"
@@ -22,4 +23,15 @@ int main()
   teacher.set_status("Silver");
   std::cout << teacher << std::endl;
   teacher.output();
+
+  // Polymorphism
+  // Teacheer is also a User
+  // we can make a reference to the Teacher
+  // we can use reference parameters
+  User& user = teacher; 
+  // this is a User but acts like a Teacher
+  // you have to put output in the user.h and user.cpp too
+  // this user method will outputs "I am a teacher" 
+  // instead of "I am a user" because of the reference
+  user.output();
 }
