@@ -36,6 +36,6 @@ Polymorphism:
 - teacher is derived from user
 - teacher both qualifies as a user and teacher...
 
-Examples > check ./077_OOP_class_across_files_multifile_comp
+Examples > check ./078_OOP_inheritance_and_polymorphism
 - Teacher class
 */
