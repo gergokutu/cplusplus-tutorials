@@ -27,6 +27,10 @@ void User::set_status(std::string status)
 
 User::User()
 {
+  // chain of calling
+  // 1: calls the constructor of User
+  // 2: calls the constructor of Teacher
+  std::cout << "User created\n";
   user_count++;
 }
 

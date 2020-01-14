@@ -5,3 +5,11 @@ void Teacher::output()
 {
   std::cout << "output\n";
 }
+
+// chain of calling
+// 1: calls the constructor of User
+// 2: calls the constructor of Teacher
+Teacher::Teacher()
+{
+  std::cout << "Teacher created\n";
+}
