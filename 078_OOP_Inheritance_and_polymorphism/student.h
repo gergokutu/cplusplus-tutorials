@@ -9,6 +9,6 @@ class Student : public User
 {
   public:
     void output();
-}
+};
 
 #endif
