@@ -5,6 +5,12 @@
 #include "teacher.h"
 #include "student.h"
 
+// function requires a User type
+void do_something(User& user)
+{
+  user.output();
+}
+
 int main()
 {
   // commented out to see clearly > chain of calling
@@ -42,4 +48,17 @@ int main()
   // this user2 is acts like as a student
   // "I am a student"
   user2.output();
+
+  // passing a teacher to the func
+  // func needs User
+  // both User and Teacher
+  // "I am a Teacher"
+  // NOT "I am a user" !!!
+  do_something(user);
+  // passing a student to the func
+  // func needs User
+  // both User and Teacher
+  // "I am a Student"
+  // NOT "I am a user" !!!
+  do_something(user2);
 }
