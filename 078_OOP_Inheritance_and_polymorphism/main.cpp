@@ -14,5 +14,9 @@ int main()
 
   // instantiate a teacher
   Teacher teacher;
+  teacher.first_name = "Teacher";
+  teacher.last_name = "Grinch";
+  teacher.set_status("Silver");
+  std::cout << teacher << std::endl;
   teacher.output();
 }
